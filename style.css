@@ -1,0 +1,162 @@
+body {
+    background-color: darkgrey;
+    font-family: sans-serif;
+}
+
+header {
+    background-color: black;
+    display: flex;
+    align-items: center;
+    padding-top: 0;
+    padding-bottom: .25em;
+    margin: 0;
+    font-size: large;
+    border-radius: .5em;
+}
+
+div > h1 {
+    text-align: center;
+    margin: 0 0 0 0;
+    padding-left: .5em;
+    padding-right: .5em;
+    color: white;
+}
+
+nav > ul {
+    list-style-type: none;
+    font-size: medium;
+    padding-left: .25em;
+    padding-right: .25em;
+}
+
+nav > ul > li {
+    padding-bottom: .2em;
+}
+
+nav > ul > li > a:visited, nav > ul > li > a:link {
+    color: white;
+}
+
+.artists {
+    display: grid;
+    grid-template-columns: auto auto;
+    text-align: center;
+    color: black;
+    margin: 2em 10% 0 10%;
+    line-height: .4em;
+}
+
+.container {
+    background-color: white;
+    margin-bottom: 1em;
+    margin-right: 2%;
+    padding-bottom: 1em;
+}
+
+.container > a > img {
+    max-width: 50%;
+}
+
+.WP > li {
+    margin-bottom: 15px;
+}
+
+.WP > h3, .WP > h4, .WP > div {
+    margin: 0;
+}
+
+.events {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.event {
+    flex: 1 1 auto;
+}
+
+.event-body {
+    height: 200px;
+    width: 800px;
+}
+
+.event-container {
+    box-shadow: 3px 3px 5px lightgray;
+    margin: 10px;
+    padding: 10px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+}
+
+.event-picture {
+    height: 200px;
+    width: 200px;
+    margin-right: 10px;
+}
+
+/* Desktop */
+@media only screen and (min-width: 999px) {
+    .events {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .event {
+        max-width: 800px;
+        flex: 1 1 auto;
+    }
+}
+
+@media screen and (min-width: 400px) and (max-width: 998px) {
+    .artists {
+        display: grid;
+        grid-template-columns: auto;
+        text-align: center;
+    }
+
+    .events {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .event-container {
+        flex-direction: column;
+    }
+
+    .event {
+        flex: 50%;
+    }
+
+    .event-picture {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 399px) {
+    .artists {
+        display: grid;
+        grid-template-columns: auto;
+        text-align: center;
+    }
+
+    .events {
+        flex-basis: auto;
+        flex-direction: column;
+    }
+
+    .event-container {
+        flex-direction: column;
+    }
+
+    .event-picture {
+        width: 100%;
+        height: auto;
+    }
+}
+
+h2 {
+    color: #b30000;
+    font-size: 20px;
+}
